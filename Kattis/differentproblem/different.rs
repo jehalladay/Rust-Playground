@@ -25,9 +25,13 @@ fn main() {
             .expect("failed to read line");
         let split = y.split(" ");
         let vec: Vec<&str> = split.collect();
-        let vec2: Vec<&str> = vec.map(|a| a.parse());
     
-        println!("{}", vec[0]);
+        let a: i64 = vec[0].parse::<i64>().unwrap();
+        let b: i64 = vec[1].parse::<i64>().unwrap();
+        // let c: i64 = (a - b).abs();
+
+
+        println!("{}", (a - b).abs());
     }
 
 
